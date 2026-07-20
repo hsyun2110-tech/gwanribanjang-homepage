@@ -83,7 +83,7 @@
   .strip .thin{color:#9fb6e0;font-size:15px}
 
   /* PAIN cards */
-  .pains{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+  .pains{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:44px}
   @media(max-width:820px){.pains{grid-template-columns:1fr}}
   .pain{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;position:relative;overflow:hidden}
   .pain::before{content:"";position:absolute;left:0;top:0;width:4px;height:100%;background:var(--red)}
@@ -267,6 +267,7 @@
     <nav class="nav-links">
       <a href="#pain">이런 고민</a>
       <a href="#solve1">인건비 해결</a>
+      <a href="#solve3">출결 자동화</a>
       <a href="#solve2">매출 2배</a>
       <a href="#pricing">요금제</a>
       <a href="#faq">FAQ</a>
@@ -308,7 +309,7 @@
   <div class="wrap center">
     <span class="kicker">Pain Point</span>
     <h2 class="title">관리형 스터디카페 창업하면, 반드시 이 벽에 부딪힙니다</h2>
-    <p class="sub">문제는 손님이 없어서가 아닙니다. 남는 게 없고, 사람 쓰기 부담스럽고, 옆집과 똑같아 보이기 때문입니다.</p>
+    <p class="sub">문제는 손님이 없어서가 아닙니다. 남는 게 없고, 사람 쓰기 부담스럽고, 옆집과 똑같아 보이고, 관리 업무에 하루가 다 가기 때문입니다.</p>
   </div>
   <div class="wrap pains">
     <div class="pain">
@@ -325,6 +326,11 @@
       <div class="quote"><span class="q">“</span>학부모가 믿고 맡길 이유가 없어요<span class="q">”</span></div>
       <p>아이가 왔는지, 공부는 하는지 보이지 않으니 '관리'를 원하는 학부모를 잡지 못합니다.</p>
       <span class="tag">낮은 재등록률</span>
+    </div>
+    <div class="pain">
+      <div class="quote"><span class="q">“</span>출결 체크에만 하루 3시간이 갑니다<span class="q">”</span></div>
+      <p>엑셀 명단을 보고 매 교시 자리마다 직접 가서 확인하고, 벌점까지 수기로 체크 — 관리 업무가 끝이 없습니다.</p>
+      <span class="tag">수기 출결 업무</span>
     </div>
   </div>
 </section>
@@ -358,8 +364,37 @@
   </div>
 </section>
 
+<!-- SOLVE 3: 출결 자동화 -->
+<section class="sec" id="solve3">
+  <div class="wrap solve">
+    <div>
+      <span class="pin">⏱ 출결 자동화</span>
+      <h2>하루 3시간 출결 업무,<br><span class="hl">단 15분</span>으로</h2>
+      <p class="lead">엑셀 명단을 들고 교시마다 자리를 도는 시대는 끝났습니다. 안면인식이 출결을 자동으로 기록하고, 관리자는 예외 상황만 확인하면 됩니다.</p>
+      <ul class="slist">
+        <li><span class="ck">1</span><div><b>안면인식 자동 출결</b> — 학생이 등원하면 자동으로 출결이 기록됩니다. 엑셀 대조도, 호명도 필요 없습니다.</div></li>
+        <li><span class="ck">2</span><div><b>교시별 자리 확인 → 이석 자동 감지</b> — 매 교시 직접 돌며 확인하던 일을 시스템이 실시간으로 감지해 알려줍니다.</div></li>
+        <li><span class="ck">3</span><div><b>벌점 수기 체크 → 자동 기록</b> — 지각·이석 벌점이 정해진 규칙대로 자동 부여되고, 리포트로 정리됩니다.</div></li>
+        <li><span class="ck">4</span><div><b>학부모 알림 자동 발송</b> — 출결과 동시에 학부모에게 실시간 알림이 나가 별도 연락이 필요 없습니다.</div></li>
+      </ul>
+    </div>
+    <div class="visual">
+      <div class="bignum">
+        <div class="cap">하루 출결 관리 업무 시간</div>
+        <div class="n"><em>15</em><small>분</small></div>
+        <div class="vs">
+          <div class="col"><div class="lab">기존 수기 출결</div><div class="val dim">하루 3시간</div></div>
+          <div class="arr">→</div>
+          <div class="col"><div class="lab">관리반장 안면인식</div><div class="val">하루 15분</div></div>
+        </div>
+      </div>
+      <p style="text-align:center;font-size:12.5px;color:#9aa3b0;margin-top:12px">* 매장 규모·운영 방식에 따라 달라질 수 있습니다.</p>
+    </div>
+  </div>
+</section>
+
 <!-- SOLVE 2: 매출 2배 -->
-<section class="sec" id="solve2">
+<section class="sec" id="solve2" style="background:var(--bg)">
   <div class="wrap solve rev">
     <div>
       <span class="pin">📈 매출 해결</span>
@@ -389,7 +424,7 @@
 </section>
 
 <!-- WHY / VALUE -->
-<section class="sec" style="background:var(--bg)" id="why">
+<section class="sec" id="why">
   <div class="wrap center">
     <span class="kicker">Why 관리반장</span>
     <h2 class="title">시작은 부담 없이, 하드웨어는 0원으로</h2>
@@ -420,7 +455,7 @@
 </section>
 
 <!-- FEATURE MODULES -->
-<section class="sec" id="features">
+<section class="sec" id="features" style="background:var(--bg)">
   <div class="wrap center">
     <span class="kicker">All-in-One</span>
     <h2 class="title">출결부터 마케팅까지, 운영의 모든 것</h2>
@@ -461,7 +496,7 @@
 </section>
 
 <!-- PRICING -->
-<section class="sec pricing" id="pricing">
+<section class="sec pricing" id="pricing" style="background:#fff">
   <div class="wrap center">
     <span class="kicker">Pricing</span>
     <h2 class="title">부담 없이 시작하고, 성장하면 확장하세요</h2>
@@ -543,7 +578,7 @@
 </section>
 
 <!-- HOW / ROADMAP -->
-<section class="sec" id="how">
+<section class="sec" id="how" style="background:var(--bg)">
   <div class="wrap center">
     <span class="kicker">How it works</span>
     <h2 class="title">시작은 가볍게, 전환은 데이터로</h2>
@@ -558,7 +593,7 @@
 </section>
 
 <!-- FAQ -->
-<section class="sec" id="faq" style="background:var(--bg)">
+<section class="sec" id="faq">
   <div class="wrap center">
     <span class="kicker">FAQ</span>
     <h2 class="title">자주 묻는 질문</h2>
@@ -615,6 +650,7 @@
       <div class="foot-links">
         <a href="#pain">이런 고민</a>
         <a href="#solve1">인건비 해결</a>
+        <a href="#solve3">출결 자동화</a>
         <a href="#solve2">매출 2배</a>
         <a href="#pricing">요금제</a>
         <a href="#apply">무료체험 신청</a>
