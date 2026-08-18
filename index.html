@@ -51,8 +51,14 @@
   .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
   .hero-copy{max-width:640px}
   .hero-photo{position:relative}
-  .hero-photo svg{width:100%;height:auto;display:block;border-radius:26px;
-    box-shadow:0 30px 60px rgba(0,0,0,.35)}
+  .hero-shots{display:grid;grid-template-columns:1.05fr .95fr;grid-template-rows:1fr 1fr;gap:14px;height:480px}
+  .shot{position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.16);
+    box-shadow:0 24px 50px rgba(0,0,0,.32)}
+  .shot img{width:100%;height:100%;object-fit:cover;display:block}
+  .shot.s1{grid-row:1/3}
+  .shot .tag{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.96);color:var(--navy);
+    font-weight:800;font-size:13.5px;padding:8px 14px;border-radius:999px;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+  .shot.s1 .tag{top:12px;bottom:auto}
   .hero-photo .pbadge{position:absolute;left:-16px;bottom:28px;background:#fff;color:var(--navy);
     font-weight:800;font-size:14px;padding:12px 18px;border-radius:14px;
     box-shadow:0 14px 30px rgba(0,0,0,.3);display:flex;gap:8px;align-items:center}
@@ -379,67 +385,11 @@
         </div>
       </div>
       <div class="hero-photo">
-        <svg viewBox="0 0 520 470" role="img" aria-label="관리선생 관제 대시보드 — 좌석 현황과 자동 알림" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="cardbg" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#EAF1FB"/><stop offset="1" stop-color="#D3E3FF"/>
-            </linearGradient>
-          </defs>
-          <rect x="0" y="0" width="520" height="470" rx="26" fill="url(#cardbg)"/>
-          <!-- deco -->
-          <circle cx="470" cy="52" r="26" fill="#5B9BF8" opacity=".14"/>
-          <circle cx="58" cy="420" r="34" fill="#1F6FEB" opacity=".10"/>
-          <circle cx="452" cy="392" r="8" fill="#5B9BF8" opacity=".45"/>
-          <circle cx="88" cy="132" r="6" fill="#1F6FEB" opacity=".35"/>
-          <path d="M430 300 l7 14 15 3 -11 11 3 15 -14-8 -14 8 3-15 -11-11 15-3z" fill="#C79A2B" opacity=".55"/>
-          <!-- dashboard screen -->
-          <rect x="70" y="96" width="380" height="296" rx="18" fill="#fff" stroke="#CFE0FF" stroke-width="2"/>
-          <rect x="70" y="96" width="380" height="46" rx="18" fill="#1B2A4A"/>
-          <rect x="70" y="124" width="380" height="18" fill="#1B2A4A"/>
-          <circle cx="94" cy="119" r="5" fill="#5B9BF8"/>
-          <circle cx="112" cy="119" r="5" fill="#1E7F4F"/>
-          <circle cx="130" cy="119" r="5" fill="#C79A2B"/>
-          <text x="260" y="124" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">관리선생 실시간 관제</text>
-          <!-- seat grid 6x4 -->
-          <g>
-            <rect x="96" y="162" width="34" height="34" rx="9" fill="#1F6FEB"/><rect x="146" y="162" width="34" height="34" rx="9" fill="#1F6FEB"/><rect x="196" y="162" width="34" height="34" rx="9" fill="#E3E8F0"/><rect x="246" y="162" width="34" height="34" rx="9" fill="#1F6FEB"/><rect x="296" y="162" width="34" height="34" rx="9" fill="#1F6FEB"/><rect x="346" y="162" width="34" height="34" rx="9" fill="#1F6FEB"/>
-            <rect x="96" y="212" width="34" height="34" rx="9" fill="#1F6FEB"/><rect x="146" y="212" width="34" height="34" rx="9" fill="#C79A2B"/><rect x="196" y="212" width="34" height="34" rx="9" fill="#1F6FEB"/><rect x="246" y="212" width="34" height="34" rx="9" fill="#1F6FEB"/><rect x="296" y="212" width="34" height="34" rx="9" fill="#E3E8F0"/><rect x="346" y="212" width="34" height="34" rx="9" fill="#1F6FEB"/>
-            <rect x="96" y="262" width="34" height="34" rx="9" fill="#1F6FEB"/><rect x="146" y="262" width="34" height="34" rx="9" fill="#1F6FEB"/><rect x="246" y="262" width="34" height="34" rx="9" fill="#1F6FEB"/><rect x="296" y="262" width="34" height="34" rx="9" fill="#1F6FEB"/><rect x="346" y="262" width="34" height="34" rx="9" fill="#1F6FEB"/>
-            <rect x="196" y="262" width="34" height="34" rx="9" fill="#D6455B"/>
-            <circle cx="230" cy="262" r="9" fill="#D6455B"/>
-            <text x="230" y="266" font-size="11" font-weight="900" fill="#fff" text-anchor="middle">!</text>
-          </g>
-          <!-- legend -->
-          <g font-size="11.5" font-weight="700" fill="#5B6472">
-            <circle cx="104" cy="330" r="5" fill="#1F6FEB"/><text x="114" y="334">학습중</text>
-            <circle cx="168" cy="330" r="5" fill="#C79A2B"/><text x="178" y="334">외출</text>
-            <circle cx="222" cy="330" r="5" fill="#D6455B"/><text x="232" y="334">이석 감지</text>
-            <circle cx="298" cy="330" r="5" fill="#E3E8F0"/><text x="308" y="334">빈자리</text>
-          </g>
-          <!-- status bar -->
-          <rect x="96" y="352" width="284" height="10" rx="5" fill="#E9EFF9"/>
-          <rect x="96" y="352" width="228" height="10" rx="5" fill="#1F6FEB"/>
-          <text x="390" y="361" font-size="11.5" font-weight="800" fill="#1B2A4A">80%</text>
-          <!-- floating chips -->
-          <g>
-            <rect x="26" y="58" width="168" height="46" rx="14" fill="#fff" stroke="#CFE0FF" stroke-width="2"/>
-            <circle cx="52" cy="81" r="11" fill="#1E7F4F"/>
-            <path d="M47 81 l4 5 8 -9" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            <text x="70" y="87" font-size="16" font-weight="700" fill="#1B2A4A">출결 자동 체크</text>
-          </g>
-          <g>
-            <rect x="342" y="132" width="156" height="46" rx="14" fill="#fff" stroke="#CFE0FF" stroke-width="2"/>
-            <circle cx="368" cy="155" r="11" fill="#1F6FEB"/>
-            <path d="M368 149 v8 m0 3.5 v.5" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
-            <text x="386" y="161" font-size="16" font-weight="700" fill="#1B2A4A">학부모 알림</text>
-          </g>
-          <g>
-            <rect x="34" y="330" width="168" height="46" rx="14" fill="#fff" stroke="#CFE0FF" stroke-width="2"/>
-            <circle cx="60" cy="353" r="11" fill="#C79A2B"/>
-            <path d="M56 353 h8 M60 349 v8" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
-            <text x="78" y="359" font-size="16" font-weight="700" fill="#1B2A4A">벌점 자동 기록</text>
-          </g>
-        </svg>
+        <div class="hero-shots">
+          <div class="shot s1"><img src="shot-face.jpg" alt="AI 안면인식 출결 단말기"><span class="tag">🤖 AI 출결관리</span></div>
+          <div class="shot s2"><img src="shot-locker.jpg" alt="휴대폰 자동 보관함"><span class="tag">📱 휴대폰 자동검사</span></div>
+          <div class="shot s3"><img src="shot-gate.jpg" alt="무인 출입 턴게이트"><span class="tag">⚡ 벌점 자동기록</span></div>
+        </div>
         <div class="pbadge"><span class="dot"></span>학부모 실시간 알림 발송 중</div>
       </div>
     </div>
