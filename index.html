@@ -575,6 +575,39 @@
   </div>
 </section>
 
+<!-- CALCULATOR -->
+<section class="sec" style="background:var(--bg)" id="calc">
+  <div class="wrap center">
+    <span class="kicker">Calculator</span>
+    <h2 class="title">우리 매장 매출, 얼마나 늘어날까요?</h2>
+    <p class="sub">좌석 수와 관리형 전환 비율만 고르면 바로 계산됩니다.</p>
+  </div>
+  <div class="calc-card">
+    <div class="calc-grid">
+      <div>
+        <div class="cfield">
+          <label>전체 좌석 수 <output id="o-seats">100석</output></label>
+          <input type="range" id="i-seats" min="30" max="300" step="10" value="100">
+        </div>
+        <div class="cfield">
+          <label>좌석 점유율 <output id="o-occ">80%</output></label>
+          <input type="range" id="i-occ" min="40" max="100" step="5" value="80">
+        </div>
+        <div class="cfield">
+          <label>관리형 전환 비율 <output id="o-conv">100%</output></label>
+          <input type="range" id="i-conv" min="0" max="100" step="10" value="100">
+        </div>
+        <p class="cnote">* 가정: 일반 좌석 월 15만원 · 관리형 좌석 월 30만원. 이해를 돕기 위한 예시 시뮬레이션이며 실제 실적을 보장하지 않습니다.</p>
+      </div>
+      <div class="cres">
+        <div class="cr"><span>일반 스터디카페 월 매출</span><b id="r-normal">1,200만원</b></div>
+        <div class="cr hi"><span>관리선생 관리형 월 매출</span><b id="r-managed">2,400만원</b></div>
+        <div class="cr gain"><span>월 매출 증가</span><b id="r-gain">+1,200만원<small id="r-mult">2.0배</small></b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PROOF (dark numbers) -->
 <section class="proof">
   <div class="wrap">
@@ -653,41 +686,8 @@
   </div>
 </section>
 
-<!-- CALCULATOR -->
-<section class="sec" style="background:var(--bg)" id="calc">
-  <div class="wrap center">
-    <span class="kicker">Calculator</span>
-    <h2 class="title">우리 매장 매출, 얼마나 늘어날까요?</h2>
-    <p class="sub">좌석 수와 관리형 전환 비율만 고르면 바로 계산됩니다.</p>
-  </div>
-  <div class="calc-card">
-    <div class="calc-grid">
-      <div>
-        <div class="cfield">
-          <label>전체 좌석 수 <output id="o-seats">100석</output></label>
-          <input type="range" id="i-seats" min="30" max="300" step="10" value="100">
-        </div>
-        <div class="cfield">
-          <label>좌석 점유율 <output id="o-occ">80%</output></label>
-          <input type="range" id="i-occ" min="40" max="100" step="5" value="80">
-        </div>
-        <div class="cfield">
-          <label>관리형 전환 비율 <output id="o-conv">100%</output></label>
-          <input type="range" id="i-conv" min="0" max="100" step="10" value="100">
-        </div>
-        <p class="cnote">* 가정: 일반 좌석 월 15만원 · 관리형 좌석 월 30만원. 이해를 돕기 위한 예시 시뮬레이션이며 실제 실적을 보장하지 않습니다.</p>
-      </div>
-      <div class="cres">
-        <div class="cr"><span>일반 스터디카페 월 매출</span><b id="r-normal">1,200만원</b></div>
-        <div class="cr hi"><span>관리선생 관리형 월 매출</span><b id="r-managed">2,400만원</b></div>
-        <div class="cr gain"><span>월 매출 증가</span><b id="r-gain">+1,200만원<small id="r-mult">2.0배</small></b></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- PRICING -->
-<section class="sec pricing" id="pricing" style="background:#fff">
+<section class="sec pricing" id="pricing">
   <div class="wrap center">
     <span class="kicker">Pricing</span>
     <h2 class="title">요금제는 딱 두 가지입니다</h2>
@@ -775,7 +775,7 @@
 </section>
 
 <!-- HOW / ROADMAP -->
-<section class="sec" id="how" style="background:var(--bg)">
+<section class="sec" id="how">
   <div class="wrap center">
     <span class="kicker">How it works</span>
     <h2 class="title">시작은 가볍게, 업그레이드는 데이터로</h2>
@@ -790,7 +790,7 @@
 </section>
 
 <!-- FAQ -->
-<section class="sec" id="faq">
+<section class="sec" id="faq" style="background:var(--bg)">
   <div class="wrap center">
     <span class="kicker">FAQ</span>
     <h2 class="title">자주 묻는 질문</h2>
@@ -820,13 +820,13 @@
         <div>✓ 관리자 1명으로 운영</div><div>✓ 당일 세팅</div><div>✓ 무약정</div>
       </div>
     </div>
-    <form class="form" onsubmit="event.preventDefault();this.querySelector('.done').style.display='block';">
+    <form class="form" id="applyForm">
       <h3>무료체험 신청</h3>
       <p class="fsub">1분이면 신청 완료. 상담료는 없습니다.</p>
-      <div class="field"><label>매장명</label><input type="text" placeholder="○○ 스터디카페" required></div>
-      <div class="field"><label>연락처</label><input type="tel" placeholder="010-0000-0000" required></div>
+      <div class="field"><label>매장명</label><input type="text" id="f-store" placeholder="○○ 스터디카페" required></div>
+      <div class="field"><label>연락처</label><input type="tel" id="f-phone" placeholder="010-0000-0000" required></div>
       <div class="field"><label>관심 요금제</label>
-        <select><option>스타터팩 (월 10만원 · 첫 달 무료)</option><option>프로 패키지 (월 30만원 · 첫 3달 무료)</option><option>아직 고민 중 · 상담 원함</option></select>
+        <select id="f-plan"><option>스타터팩 (월 10만원 · 첫 달 무료)</option><option>프로 패키지 (월 30만원 · 첫 3달 무료)</option><option>아직 고민 중 · 상담 원함</option></select>
       </div>
       <button type="submit" class="btn btn-primary">무료로 신청하기</button>
       <p class="note done" style="display:none;color:var(--green);font-weight:700">신청이 접수되었습니다! 담당자가 곧 연락드릴게요.</p>
@@ -880,6 +880,29 @@
   }
   [seats,occ,conv].forEach(function(el){el.addEventListener('input',calc);});
   calc();
+})();
+(function(){
+  var FORM_URL='https://script.google.com/macros/s/AKfycbydtWzxzWx7Um5h2xeiciSJS1-U8ydGWZM-IoywHHeCSZ5uy8vVqR4fzUE1sMQn7HpUfQ/exec';
+  var f=document.getElementById('applyForm');
+  if(!f)return;
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var btn=f.querySelector('button');
+    btn.disabled=true;btn.textContent='전송 중...';
+    var body=new URLSearchParams({
+      store:document.getElementById('f-store').value,
+      phone:document.getElementById('f-phone').value,
+      plan:document.getElementById('f-plan').value
+    });
+    fetch(FORM_URL,{method:'POST',mode:'no-cors',body:body}).then(function(){
+      f.querySelector('.done').style.display='block';
+      btn.textContent='신청 완료';
+      f.reset();
+    }).catch(function(){
+      btn.disabled=false;btn.textContent='무료로 신청하기';
+      alert('전송에 실패했습니다. 잠시 후 다시 시도해주세요.');
+    });
+  });
 })();
 </script>
 </body>
