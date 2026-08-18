@@ -147,6 +147,13 @@
   .ptile .pt-n em{color:var(--blue-l);font-style:normal}
   .ptile .pt-l{margin-top:10px;font-size:14px;color:#9FB4DC;font-weight:600}
 
+  /* UI SCREENSHOTS */
+  .ui-shot{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);
+    box-shadow:0 18px 44px rgba(27,42,74,.14);background:#fff}
+  .ui-shot img{width:100%;display:block}
+  .ui-shot .ui-pill{position:absolute;left:12px;bottom:12px;background:rgba(27,42,74,.92);color:#fff;
+    font-weight:700;font-size:13px;padding:8px 14px;border-radius:999px}
+
   /* CALCULATOR */
   .calc-card{max-width:860px;margin:44px auto 0;background:#fff;border:1px solid var(--line);
     border-radius:22px;padding:36px 34px;box-shadow:0 18px 44px rgba(27,42,74,.08)}
@@ -452,7 +459,7 @@
       <div class="lc-top"><h3>지각생 발생</h3></div>
       <div class="lc-quote">9시 10분, 아직 안 온 학생이 3명 있어요.</div>
       <div class="lc-flow"><b>자동 검출</b><i>→</i><b>학부모 알림톡</b><i>→</i><b>벌점 기록</b></div>
-      <div class="lc-res">관리자 개입 0회로 처리 완료</div>
+      <div class="lc-res">확인 전화 한 통이면 끝 — 나머지는 자동</div>
     </div>
     <div class="lab-card">
       <div class="lc-top"><h3>이석 발생</h3></div>
@@ -502,16 +509,11 @@
       </ul>
     </div>
     <div class="visual">
-      <div class="bignum">
-        <div class="cap">관리자 1명당 감당 학생 수</div>
-        <div class="n">1 : <em>200</em></div>
-        <div class="vs">
-          <div class="col"><div class="lab">일반 관리형 독서실</div><div class="val dim">1 : 50~80명</div></div>
-          <div class="arr">→</div>
-          <div class="col"><div class="lab">관리선생</div><div class="val">1 : 200명</div></div>
-        </div>
+      <div class="ui-shot">
+        <img src="ui-seatmap.jpg" alt="관리선생 좌석 배치도 실제 화면 — 전 좌석 실시간 현황">
+        <span class="ui-pill">실제 관제 화면 — 전 좌석을 한 화면에서</span>
       </div>
-      <p style="text-align:center;font-size:12.5px;color:#9aa3b0;margin-top:12px">* 자동화 범위·매장 운영 형태에 따라 달라질 수 있는 목표 수치입니다.</p>
+      <p style="text-align:center;font-size:12.5px;color:#9aa3b0;margin-top:12px">* 실제 운영 중인 매장의 관리선생 화면입니다 (개인정보 가림 처리).</p>
     </div>
   </div>
 </section>
@@ -531,16 +533,11 @@
       </ul>
     </div>
     <div class="visual">
-      <div class="bignum">
-        <div class="cap">하루 출결 관리 업무 시간</div>
-        <div class="n"><em>15</em><small>분</small></div>
-        <div class="vs">
-          <div class="col"><div class="lab">기존 수기 출결</div><div class="val dim">하루 3시간</div></div>
-          <div class="arr">→</div>
-          <div class="col"><div class="lab">관리선생 안면인식</div><div class="val">하루 15분</div></div>
-        </div>
+      <div class="ui-shot">
+        <img src="ui-attendance.jpg" alt="관리선생 출결현황 실제 화면 — 교시별 출결과 미출석 자동 처리">
+        <span class="ui-pill">실제 출결 화면 — 미출석 자동 처리 파이프라인</span>
       </div>
-      <p style="text-align:center;font-size:12.5px;color:#9aa3b0;margin-top:12px">* 매장 규모·운영 방식에 따라 달라질 수 있습니다.</p>
+      <p style="text-align:center;font-size:12.5px;color:#9aa3b0;margin-top:12px">* 실제 운영 중인 매장의 관리선생 화면입니다 (개인정보 가림 처리).</p>
     </div>
   </div>
 </section>
