@@ -396,11 +396,11 @@
   <div class="wrap nav">
     <a class="logo" href="#top">관리<span>선생</span></a>
     <nav class="nav-links">
+      <a href="#calc">매출 상승 효과 계산기</a>
+      <a href="#solve2">2배의 원리</a>
       <a href="#lab">시나리오</a>
       <a href="#solve1">인건비 해결</a>
-      <a href="#solve3">출결 자동화</a>
-      <a href="#solve2">매출 2배</a>
-      <a href="#calc">매출 상승 효과 계산기</a>
+      <a href="#story">스토리</a>
       <a href="#pricing">요금제</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -415,11 +415,11 @@
       <div class="hero-copy">
         <span class="badge">관리형 운영 2년 · 대기자 300명+ 노하우를 담은 시스템</span>
         <div class="catch">관리형은 <b>관리선생</b></div>
-        <h1>관리자 <span class="hl">1명</span>이 학생 <span class="hl">200명</span>,<br>매출은 <span class="hl">2배</span>로,<br>인건비는 <span class="hl">절반 이하</span>로.</h1>
-        <p class="lead">사람을 더 뽑지 않아도, 가격을 낮추지 않아도 됩니다.<br>관리선생이 출결·상담·수납·집중관리를 자동으로 대신합니다.</p>
-        <p class="zero">솔루션 이용료 <b>0원</b>으로 시작 — 무료체험 <b>1~3개월</b> · 약정 없음.</p>
+        <h1>옆집 관리형은 <span class="hl">대기자 300명</span>,<br>우리 매장은 왜<br><span class="hl">빈자리</span>가 늘어날까요?</h1>
+        <p class="lead">그 차이는 '관리'입니다. 관리형 매장을 2년 운영하며 대기자 300명을 만든 노하우를, 관리선생이 시스템으로 그대로 드립니다.</p>
+        <p class="zero">무료체험 <b>1~3개월</b> · 세팅 <b>하루면 끝</b> · 약정 없음.</p>
         <div class="hero-cta">
-          <a href="#apply" class="btn btn-primary">첫 달 무료로 시작하기 →</a>
+          <a href="#apply" class="btn btn-primary">무료체험 신청하기 →</a>
           <a href="#calc" class="btn btn-ghost">매출 상승 효과 계산기</a>
         </div>
       </div>
@@ -480,11 +480,74 @@
   </div>
 </section>
 
+<!-- CALCULATOR -->
+<section class="sec" style="background:var(--bg)" id="calc">
+  <div class="wrap center">
+    <span class="kicker">Calculator</span>
+    <h2 class="title">그래서, 매출이 얼마나 늘어날까요?</h2>
+    <p class="sub">좌석 수와 관리형 전환 비율만 고르면, 우리 매장 기준으로 바로 계산됩니다.</p>
+  </div>
+  <div class="calc-card">
+    <div class="calc-grid">
+      <div>
+        <div class="cfield">
+          <label>전체 좌석 수 <output id="o-seats">100석</output></label>
+          <input type="range" id="i-seats" min="30" max="300" step="10" value="100">
+        </div>
+        <div class="cfield">
+          <label>좌석 점유율 <output id="o-occ">80%</output></label>
+          <input type="range" id="i-occ" min="40" max="100" step="5" value="80">
+        </div>
+        <div class="cfield">
+          <label>관리형 전환 비율 <output id="o-conv">100%</output></label>
+          <input type="range" id="i-conv" min="0" max="100" step="10" value="100">
+        </div>
+        <p class="cnote">* 가정: 일반 좌석 월 15만원 · 관리형 좌석 월 30만원. 이해를 돕기 위한 예시 시뮬레이션이며 실제 실적을 보장하지 않습니다.</p>
+      </div>
+      <div class="cres">
+        <div class="cr"><span>일반 스터디카페 월 매출</span><b id="r-normal">1,200만원</b></div>
+        <div class="cr hi"><span>관리선생 관리형 월 매출</span><b id="r-managed">2,400만원</b></div>
+        <div class="cr gain"><span>월 매출 증가</span><b id="r-gain">+1,200만원<small id="r-mult">2.0배</small></b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLVE 2: 매출 2배 -->
+<section class="sec" id="solve2">
+  <div class="wrap solve rev">
+    <div>
+      <span class="pin">2배의 원리</span>
+      <h2>왜 매출 2배가<br><span class="hl">가능할까요?</span></h2>
+      <p class="lead">관리형은 자리를 파는 게 아니라 '아이의 성적 관리'를 파는 상품입니다. 학부모는 좌석엔 월 15만원을, 관리에는 월 30만원을 지불합니다. 대부분의 매장이 몰라서 놓치는 이 프리미엄을, 관리선생이 시스템으로 만들어 드립니다.</p>
+      <ul class="slist">
+        <li><span class="ck">↑</span><div><b>객단가 상승</b> — 단순 좌석 이용권(월 15만원대)이 관리·집중케어가 붙은 관리형 상품(월 30만원대)으로 올라갑니다.</div></li>
+        <li><span class="ck">↑</span><div><b>재원율 상승</b> — 학부모가 출결·학습을 실시간으로 확인하니 신뢰가 쌓여 이탈이 줄고 오래 남습니다.</div></li>
+        <li><span class="ck">↓</span><div><b>인건비 절감</b> — 1명이 200명을 커버하니, 매출이 올라도 비용은 그대로. 남는 이익이 커집니다.</div></li>
+      </ul>
+    </div>
+    <div class="visual">
+      <div class="revcard">
+        <div class="head">
+          <div class="t">100석 매장 · 월 매출 예시 비교</div>
+          <div class="assume">가정: 좌석 점유 80석 기준</div>
+        </div>
+        <div class="revrow htop"><div class="lbl">구분</div><div class="a">일반 스터디카페</div><div class="b">관리선생 관리형</div></div>
+        <div class="revrow"><div class="lbl">객단가(월)</div><div class="a">15만원</div><div class="b">30만원</div></div>
+        <div class="revrow"><div class="lbl">유료 좌석 수</div><div class="a">80석</div><div class="b">80석</div></div>
+        <div class="revrow"><div class="lbl">관리 인력</div><div class="a">2~3명</div><div class="b">1명</div></div>
+        <div class="revrow final"><div class="lbl">월 매출</div><div class="a">1,200만원</div><div class="b">2,400만원</div></div>
+        <div class="foot">* 이해를 돕기 위한 예시 시뮬레이션이며 실제 실적을 보장하지 않습니다.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SCENARIO LAB -->
 <section class="sec" style="background:var(--bg)" id="lab">
   <div class="wrap center">
     <span class="kicker">Scenario Lab</span>
-    <h2 class="title">관리선생이 대신 일하는 순간들</h2>
+    <h2 class="title">세팅은 하루, 운영은 자동입니다</h2>
     <p class="sub">상황을 고르면 관리선생이 어떻게 처리하는지 바로 볼 수 있습니다. 아래 전부, 관리자 개입 없이 자동으로 돌아갑니다.</p>
   </div>
   <div class="wrap grid g3" style="margin-top:44px">
@@ -634,66 +697,21 @@
   </div>
 </section>
 
-<!-- SOLVE 2: 매출 2배 -->
-<section class="sec" id="solve2" style="background:var(--bg)">
-  <div class="wrap solve rev">
-    <div>
-      <span class="pin">매출 해결</span>
-      <h2>일반 스터디카페보다<br>매출 <span class="hl">2배 이상</span></h2>
-      <p class="lead">'관리형'은 자리를 파는 게 아니라 '아이의 성적 관리'를 파는 상품입니다. 그래서 학부모가 더 높은 금액을, 더 오래 지불합니다.</p>
-      <ul class="slist">
-        <li><span class="ck">↑</span><div><b>객단가 상승</b> — 단순 좌석 이용권(월 15만원대)이 관리·집중케어가 붙은 관리형 상품(월 30만원대)으로 올라갑니다.</div></li>
-        <li><span class="ck">↑</span><div><b>재원율 상승</b> — 학부모가 출결·학습을 실시간으로 확인하니 신뢰가 쌓여 이탈이 줄고 오래 남습니다.</div></li>
-        <li><span class="ck">↓</span><div><b>인건비 절감</b> — 1명이 200명을 커버하니, 매출이 올라도 비용은 그대로. 남는 이익이 커집니다.</div></li>
-      </ul>
-    </div>
-    <div class="visual">
-      <div class="revcard">
-        <div class="head">
-          <div class="t">100석 매장 · 월 매출 예시 비교</div>
-          <div class="assume">가정: 좌석 점유 80석 기준</div>
-        </div>
-        <div class="revrow htop"><div class="lbl">구분</div><div class="a">일반 스터디카페</div><div class="b">관리선생 관리형</div></div>
-        <div class="revrow"><div class="lbl">객단가(월)</div><div class="a">15만원</div><div class="b">30만원</div></div>
-        <div class="revrow"><div class="lbl">유료 좌석 수</div><div class="a">80석</div><div class="b">80석</div></div>
-        <div class="revrow"><div class="lbl">관리 인력</div><div class="a">2~3명</div><div class="b">1명</div></div>
-        <div class="revrow final"><div class="lbl">월 매출</div><div class="a">1,200만원</div><div class="b">2,400만원</div></div>
-        <div class="foot">* 이해를 돕기 위한 예시 시뮬레이션이며 실제 실적을 보장하지 않습니다.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CALCULATOR -->
-<section class="sec" id="calc">
+<!-- STORY -->
+<section class="sec" style="background:var(--bg)" id="story">
   <div class="wrap center">
-    <span class="kicker">Calculator</span>
-    <h2 class="title">우리 매장 매출, 얼마나 늘어날까요?</h2>
-    <p class="sub">좌석 수와 관리형 전환 비율만 고르면 바로 계산됩니다.</p>
+    <span class="kicker">Our Story</span>
+    <h2 class="title">대기자 300명은 이렇게 만들어졌습니다</h2>
+    <p class="sub">소프트웨어 회사의 상상이 아니라, 직접 매장을 운영하며 겪은 2년의 기록입니다.</p>
   </div>
-  <div class="calc-card">
-    <div class="calc-grid">
-      <div>
-        <div class="cfield">
-          <label>전체 좌석 수 <output id="o-seats">100석</output></label>
-          <input type="range" id="i-seats" min="30" max="300" step="10" value="100">
-        </div>
-        <div class="cfield">
-          <label>좌석 점유율 <output id="o-occ">80%</output></label>
-          <input type="range" id="i-occ" min="40" max="100" step="5" value="80">
-        </div>
-        <div class="cfield">
-          <label>관리형 전환 비율 <output id="o-conv">100%</output></label>
-          <input type="range" id="i-conv" min="0" max="100" step="10" value="100">
-        </div>
-        <p class="cnote">* 가정: 일반 좌석 월 15만원 · 관리형 좌석 월 30만원. 이해를 돕기 위한 예시 시뮬레이션이며 실제 실적을 보장하지 않습니다.</p>
-      </div>
-      <div class="cres">
-        <div class="cr"><span>일반 스터디카페 월 매출</span><b id="r-normal">1,200만원</b></div>
-        <div class="cr hi"><span>관리선생 관리형 월 매출</span><b id="r-managed">2,400만원</b></div>
-        <div class="cr gain"><span>월 매출 증가</span><b id="r-gain">+1,200만원<small id="r-mult">2.0배</small></b></div>
-      </div>
-    </div>
+  <div class="wrap steps">
+    <div class="step"><div class="n">1</div><h4>직접 매장을 열었습니다</h4><p>출결 체크, 학부모 전화, 벌점 관리 — 전부 사람이 했고, 하루가 모자랐습니다.</p></div>
+    <div class="step"><div class="n">2</div><h4>시스템으로 만들었습니다</h4><p>안면인식 출결, 자동 알림, 벌점 규정, 리포트까지 — 반복되는 모든 일을 자동화했습니다.</p></div>
+    <div class="step"><div class="n">3</div><h4>입소문이 나기 시작했습니다</h4><p>"아이가 달라졌다"는 학부모의 입소문이 재등록과 소개로 이어졌습니다.</p></div>
+    <div class="step"><div class="n" style="background:var(--green)">4</div><h4>대기자 300명</h4><p>지금은 자리가 나야 들어올 수 있는 매장이 됐습니다. 그 시스템을 그대로 드립니다.</p></div>
+  </div>
+  <div class="wrap center" style="margin-top:36px">
+    <a href="#apply" class="btn btn-primary">이 시스템으로 시작하기 →</a>
   </div>
 </section>
 
