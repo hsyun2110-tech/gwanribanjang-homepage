@@ -227,7 +227,8 @@
   /* SOLVE block (big alternating) */
   .solve{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
   .solve.rev{grid-template-columns:1fr 1fr}
-  @media(max-width:900px){.solve{grid-template-columns:1fr;gap:34px}.solve.rev .visual{order:-1}}
+  @media(max-width:900px){.solve,.solve.rev{grid-template-columns:1fr;gap:34px}.solve.rev .visual{order:-1}}
+  @media(max-width:640px){.revrow{font-size:12.5px;padding:12px 10px}.revcard .rc-head{font-size:14px}}
   .solve .pin{display:inline-flex;align-items:center;gap:8px;background:#EAF1FB;color:var(--blue);
     font-weight:800;font-size:13px;padding:6px 14px;border-radius:999px;margin-bottom:16px}
   .solve h2{font-size:32px;font-weight:900;color:var(--navy);letter-spacing:-.6px;line-height:1.22;margin-bottom:14px}
