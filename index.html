@@ -485,22 +485,18 @@
   <div class="wrap center">
     <span class="kicker">Calculator</span>
     <h2 class="title">그래서, 매출이 얼마나 늘어날까요?</h2>
-    <p class="sub">좌석 수와 관리형 전환 비율만 고르면, 우리 매장 기준으로 바로 계산됩니다.</p>
+    <p class="sub">좌석 수만 고르면, 우리 매장 기준으로 바로 계산됩니다. (관리형 100% 전환 기준)</p>
   </div>
   <div class="calc-card">
     <div class="calc-grid">
       <div>
         <div class="cfield">
           <label>전체 좌석 수 <output id="o-seats">100석</output></label>
-          <input type="range" id="i-seats" min="30" max="300" step="10" value="100">
+          <input type="range" id="i-seats" min="30" max="200" step="10" value="100">
         </div>
         <div class="cfield">
           <label>좌석 점유율 <output id="o-occ">80%</output></label>
           <input type="range" id="i-occ" min="40" max="100" step="5" value="80">
-        </div>
-        <div class="cfield">
-          <label>관리형 전환 비율 <output id="o-conv">100%</output></label>
-          <input type="range" id="i-conv" min="0" max="100" step="10" value="100">
         </div>
         <p class="cnote">* 가정: 일반 좌석 월 15만원 · 관리형 좌석 월 30만원. 이해를 돕기 위한 예시 시뮬레이션이며 실제 실적을 보장하지 않습니다.</p>
       </div>
@@ -969,12 +965,12 @@
 
 <script>
 (function(){
-  var seats=document.getElementById('i-seats'),occ=document.getElementById('i-occ'),conv=document.getElementById('i-conv');
+  var seats=document.getElementById('i-seats'),occ=document.getElementById('i-occ');
   if(!seats)return;
   var NORMAL=15,MANAGED=30; // 만원
   function fmt(n){return n.toLocaleString('ko-KR')+'만원';}
   function calc(){
-    var s=+seats.value,o=+occ.value/100,c=+conv.value/100;
+    var s=+seats.value,o=+occ.value/100,c=1;
     var paid=Math.round(s*o);
     var normal=paid*NORMAL;
     var managed=Math.round(paid*c)*MANAGED+(paid-Math.round(paid*c))*NORMAL;
@@ -982,12 +978,11 @@
     var mult=normal>0?(managed/normal):0;
     document.getElementById('o-seats').textContent=s+'석';
     document.getElementById('o-occ').textContent=Math.round(o*100)+'%';
-    document.getElementById('o-conv').textContent=Math.round(c*100)+'%';
     document.getElementById('r-normal').textContent=fmt(normal);
     document.getElementById('r-managed').textContent=fmt(managed);
     document.getElementById('r-gain').innerHTML='+'+fmt(gain)+'<small id="r-mult">'+mult.toFixed(1)+'배</small>';
   }
-  [seats,occ,conv].forEach(function(el){el.addEventListener('input',calc);});
+  [seats,occ].forEach(function(el){el.addEventListener('input',calc);});
   calc();
 })();
 (function(){
