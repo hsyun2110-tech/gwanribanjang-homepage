@@ -645,9 +645,46 @@
     <div class="phones">
       <div>
         <div class="phone"><div class="screen">
-          <img src="app-live.jpg" alt="학부모 앱 실제 화면 — 교시별 출입현황" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block">
+          <div class="p-head">관리선생 <span class="p-time">출입현황</span></div>
+          <svg viewBox="0 0 300 400" style="width:100%;flex:1;display:block;background:#F5F8FD" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <g id="avL"><circle r="15" fill="#fff" stroke="#E4557A" stroke-width="2"/><circle cy="-4" r="5" fill="#C3CCDA"/><path d="M-8 10 a8 8 0 0 1 16 0 z" fill="#C3CCDA"/></g>
+              <g id="avR"><circle r="15" fill="#fff" stroke="#4A7DF0" stroke-width="2"/><circle cy="-4" r="5" fill="#C3CCDA"/><path d="M-8 10 a8 8 0 0 1 16 0 z" fill="#C3CCDA"/></g>
+            </defs>
+            <!-- timeline column -->
+            <rect x="118" y="14" width="64" height="34" rx="16" fill="#fff" stroke="#E3E8F0"/>
+            <text x="150" y="36" font-size="12" font-weight="700" fill="#1B2A4A" text-anchor="middle">교시전</text>
+            <rect x="118" y="52" width="64" height="62" rx="8" fill="#DDF3E4"/>
+            <text x="150" y="87" font-size="12" font-weight="700" fill="#1B2A4A" text-anchor="middle">1교시</text>
+            <rect x="118" y="118" width="64" height="62" rx="8" fill="#DDF3E4"/>
+            <text x="150" y="153" font-size="12" font-weight="700" fill="#1B2A4A" text-anchor="middle">2교시</text>
+            <rect x="118" y="184" width="64" height="62" rx="8" fill="#DDF3E4"/>
+            <text x="150" y="219" font-size="12" font-weight="700" fill="#1B2A4A" text-anchor="middle">3교시</text>
+            <rect x="118" y="250" width="64" height="34" rx="8" fill="#EAF7EE"/>
+            <text x="150" y="272" font-size="12" font-weight="700" fill="#1B2A4A" text-anchor="middle">점심</text>
+            <rect x="118" y="288" width="64" height="82" rx="8" fill="#DDF3E4"/>
+            <text x="150" y="333" font-size="12" font-weight="700" fill="#1B2A4A" text-anchor="middle">4교시</text>
+            <!-- 입실(blue, right) -->
+            <path d="M247 70 C215 70 210 58 184 56" stroke="#4A7DF0" stroke-width="1.6" fill="none"/>
+            <use href="#avR" x="264" y="70"/>
+            <path d="M247 140 C215 140 210 122 184 120" stroke="#4A7DF0" stroke-width="1.6" fill="none"/>
+            <use href="#avR" x="264" y="140"/>
+            <path d="M247 300 C215 300 210 292 184 290" stroke="#4A7DF0" stroke-width="1.6" fill="none"/>
+            <use href="#avR" x="264" y="300"/>
+            <!-- 퇴실(red, left) -->
+            <path d="M53 130 C85 130 90 122 116 120" stroke="#E4557A" stroke-width="1.6" fill="none"/>
+            <use href="#avL" x="36" y="130"/>
+            <path d="M53 205 C85 205 90 188 116 186" stroke="#E4557A" stroke-width="1.6" fill="none"/>
+            <use href="#avL" x="36" y="205"/>
+            <path d="M53 268 C85 268 90 254 116 252" stroke="#E4557A" stroke-width="1.6" fill="none"/>
+            <use href="#avL" x="36" y="268"/>
+            <!-- legend -->
+            <circle cx="96" cy="386" r="4" fill="#4A7DF0"/><text x="105" y="390" font-size="10.5" font-weight="700" fill="#5B6472">입실</text>
+            <circle cx="150" cy="386" r="4" fill="#E4557A"/><text x="159" y="390" font-size="10.5" font-weight="700" fill="#5B6472">퇴실</text>
+            <text x="204" y="390" font-size="10.5" font-weight="700" fill="#5B6472">사진 기록</text>
+          </svg>
         </div></div>
-        <div class="phone-label">학부모 앱 — 실시간 출입현황<small>교시별 입실·퇴실이 사진과 함께 기록 (실제 화면 · 가림 처리)</small></div>
+        <div class="phone-label">학부모 앱 — 실시간 출입현황<small>교시별 입실·퇴실이 사진과 함께 시간표로 기록</small></div>
       </div>
       <div>
         <div class="phone"><div class="screen">
